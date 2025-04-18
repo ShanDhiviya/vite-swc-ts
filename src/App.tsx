@@ -1,27 +1,20 @@
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-} from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import { Link } from "react-router-dom";
 
-import { globalState, updateUser, useGlobalState} from './core';
-import './App.css'; 
+import { updateUser, useGlobalState } from "./core";
+import "./App.css";
 
-import Home from './pages/Home.tsx';
-import Login from './pages/Login.tsx';
-
-
-
+import Home from "./pages/Home.tsx";
+import Login from "./pages/Login.tsx";
 
 const update = () => {
-  updateUser('Shan UI');
-}
+  updateUser("Shan UI");
+};
 
 function App() {
   const user = useGlobalState().user;
-  
+
   return (
     <div className="app-container">
       <header className="app-header">
@@ -34,20 +27,18 @@ function App() {
       <nav className="app-nav">
         <ul>
           <li>
-          <Link to="/">Home</Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
-          <Link to="/login">Login</Link>
+            <Link to="/login">Login</Link>
           </li>
         </ul>
       </nav>
       <main className="app-main">
-
-       <Routes>
-       <Route path="/" element={<Home />} />
-       <Route path="/login" element={<Login />} />
-       </Routes>
-    
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
       </main>
     </div>
   );
