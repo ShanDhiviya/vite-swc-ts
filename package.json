@@ -1,7 +1,7 @@
 {
   "name": "vite-swc-ts",
   "homepage": "https://shandhiviya.github.io/vite-swc-ts/",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {

@@ -14,7 +14,7 @@ export default defineConfig({
       ]
     })
   ],
-  base: '/vite-swc-ts',
+  base: '/vite-swc-ts/',
   build: {
     outDir: 'build'
   }
